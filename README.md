@@ -2,7 +2,7 @@
 Welcome to the Git repository for our Face Recognition Attendance System project. This repository serves as the central hub for our collaborative efforts in developing an innovative solution for automating attendance tracking using facial recognition technology.
 Repository Description:
 
-Key Features:
+# Key Features:
 
 Face Recognition: Our project utilizes OpenCV and face_recognition libraries to detect and recognize faces in real-time captured from a webcam feed. This feature enables automated attendance marking based on recognized faces.
 
@@ -16,7 +16,7 @@ User-Friendly Interface: Our system provides a user-friendly interface, displayi
 
 Efficient Workflow: The Git repository facilitates collaborative development, enabling team members to work on different aspects of the project concurrently. We utilize branching and merging strategies to manage code changes and streamline development workflow.
 
-Repository Structure:
+# Repository Structure:
 
 Main Branch: The main branch contains stable versions of the project codebase, representing production-ready releases with tested and validated features.
 
