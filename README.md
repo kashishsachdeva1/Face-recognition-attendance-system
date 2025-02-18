@@ -1,27 +1,68 @@
-# Face-recognition-attendance-system
-Welcome to the Git repository for our Face Recognition Attendance System project. This repository serves as the central hub for our collaborative efforts in developing an innovative solution for automating attendance tracking using facial recognition technology.
-Repository Description:
+# Face Recognition Attendance System
 
-# Key Features:
+## Overview
+This project is a **Face Recognition Attendance System** that uses OpenCV and the `face_recognition` library to detect and recognize faces from a webcam feed and mark attendance in a CSV file.
 
-Face Recognition: Our project utilizes OpenCV and face_recognition libraries to detect and recognize faces in real-time captured from a webcam feed. This feature enables automated attendance marking based on recognized faces.
+## Tech Stack
+- **Python**
+- **OpenCV** (Computer Vision Library)
+- **face_recognition** (Dlib-based face recognition library)
+- **NumPy** (Numerical Computation)
+- **CSV** (Attendance Logging)
+- **OS** (File Handling)
+- **DateTime** (Timestamping Attendance)
 
-Attendance Tracking: With our system, users can efficiently track attendance by simply appearing in front of the camera. The system records the time of appearance along with the associated individual's name in a CSV file for easy tracking and analysis.
+## Features
+- Real-time face recognition using a webcam
+- Automatically detects and matches faces from a stored database
+- Records attendance with timestamp in a CSV file
+- Displays recognized face names in a live video feed
 
-Integration with OpenCV: Leveraging OpenCV, we capture video from the webcam and perform real-time face detection and recognition. This integration ensures robust performance and accurate attendance tracking.
+## Installation
+### Prerequisites
+Make sure you have **Python 3.x** installed.
 
-Dynamic Encoding: We dynamically encode known faces from images stored in the 'imageBasic' folder, allowing for flexibility in adding new individuals to the system without requiring manual encoding.
+### Install Required Libraries
+Run the following command to install dependencies:
+```bash
+pip install opencv-python numpy face_recognition
+```
 
-User-Friendly Interface: Our system provides a user-friendly interface, displaying recognized faces along with their names in real-time video feed. This interface enhances user experience and facilitates seamless interaction with the system.
+## Folder Structure
+```
+Face_Recognition_Attendance/
+│── imageBasic/       # Folder containing reference images
+│── attendance.csv    # CSV file to store attendance records
+│── face_recognition.py   # Main script for face recognition
+```
 
-Efficient Workflow: The Git repository facilitates collaborative development, enabling team members to work on different aspects of the project concurrently. We utilize branching and merging strategies to manage code changes and streamline development workflow.
+## Usage
+1. Place images of the people you want to recognize inside the `imageBasic/` folder.
+2. Run the script:
+   ```bash
+   python face_recognition.py
+   ```
+3. The webcam will open, detect faces, and match them against stored images.
+4. Recognized names will be displayed and stored in `attendance.csv`.
+5. Press **'q'** to quit the webcam feed.
 
-# Repository Structure:
+## How It Works
+- Loads images from the `imageBasic/` directory and extracts face encodings.
+- Captures live video frames, detects faces, and encodes them.
+- Compares live face encodings with stored encodings.
+- If a match is found, marks attendance in `attendance.csv` with the current timestamp.
 
-Main Branch: The main branch contains stable versions of the project codebase, representing production-ready releases with tested and validated features.
+## Example Output (CSV Format)
+```
+Name,Time
+John,14:35:21
+Alice,14:40:10
+```
 
-Feature Branches: We create feature branches (e.g., feature/attendance-tracking) to develop new features or address specific functionalities independently. Feature branches undergo thorough testing before merging into the main branch via pull requests.
+## Future Improvements
+- Implement GUI for better user interaction
+- Store attendance in a database instead of CSV
+- Enable multi-camera support for larger environments
 
-Documentation: The repository includes detailed documentation, providing instructions for project setup, usage guidelines, and contribution guidelines. Clear documentation ensures smooth onboarding for new contributors and fosters effective collaboration within the team.
 
 
